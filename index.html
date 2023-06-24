@@ -5,19 +5,55 @@
         <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
         <meta charset="utf-8">
         <style>
-            h1,h2 {color:red; font-size: 10px}
+            h1 {color:rgb(0, 0, 0); font-size: 40px}
+            h2 {color:rgb(54, 72, 235); font-size: 20px}
             h3 {text-decoration:underline;}
-            header h1{border:3px solid red;}
+            
+            main{
+                margin: 0;
+                position: absolute;
+                text-align: center;
+            }
+
+            #btns button{
+                border: 3px solid black;
+                border-radius: 5px;
+                padding : 8px 60px;
+                margin: 20px;
+            }
+            #btns button:hover{
+                color:white;
+                background-color: black;
+            }
+
         </style>
     </head>
     <body>
-        <header>
-            <h1>CSS</h1>
-        </header>
+        <py-script src="./test.py"></py-script>
+
+        <div class ="main"; style="text-align: center">
+            <h1> Tic-Tac-Toe using MCTS </h1>
+            <h2> Start Tic-Tac-Toe of the following sizes: </h2>
+
+            <div id = "btns">
+                <button style = "font-size: 2em;" id ="3btn" pys-onClick ="3n" >3</button>
+                <button style = "font-size: 2em;" id ="4btn" pys-onClick ="4n">4</button>
+            </div>
+            
+            <header>
+                <h1>
+                    CSS
+                </h1>
+            </header>
+    
+
+        </div>
 
         <py-script> 
             print('Hello, World!') 
             print("this is python")
+            print("lol")
+            
         </py-script>
         
     </body>
