@@ -49,19 +49,6 @@
             </div>
             
             <py-script>
-                from js import document
-                from pyodide import create_proxy
-
-                from test import func
-
-                def hi(a):
-                    pyscript.write("lolololololol")
-                    print("this is print")
-                func(1)
-
-                hi_proxy = create_proxy(hi)
-                hi_button = document.getElementById("3btn")
-                hi_button.addEventListener("click",hi_proxy)
 
             </py-script>
 
