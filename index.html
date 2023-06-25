@@ -34,7 +34,6 @@
         </style>
     </head>
     <body>
-        # <py-script src="./test.py"></py-script>
 
         <div class ="main"; style="text-align: center">
             <h1> Tic-Tac-Toe using MCTS </h1>
@@ -48,11 +47,11 @@
             <div>
                 <table id ="hello"></table>
             </div>
-
+            
             <py-script>
                 from test import func
+                from pyodide import create_proxy
                 func(1)
-
             </py-script>
 
             <header>
