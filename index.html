@@ -4,10 +4,6 @@
         <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
         <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
         <meta charset="utf-8">
-        <py-env>
-            - paths:
-                - ./test.py
-        </py-env>
         
         <style>
             h1 {color:rgb(0, 0, 0); font-size: 40px}
@@ -40,16 +36,26 @@
             <h2> Start Tic-Tac-Toe of the following sizes: </h2>
 
             <div id = "btns">
-                <button style = "font-size: 2em;" id ="3btn" pys-onClick ="3n" >3</button>
-                <button style = "font-size: 2em;" id ="4btn" pys-onClick ="4n">4</button>
+                <button style = "font-size: 2em;" id ="3btn" onClick ="n3" >3</button>
+                <button style = "font-size: 2em;" id ="4btn" pys-onClick ="n4">4</button>
             </div>
             
             <div>
                 <table id ="hello"></table>
             </div>
-            
-            <py-script>
+            <script>
+                function n3(){
+                    alert("lee hyun seo");
+                }
+            </script>
 
+            <py-script>
+                from js import document
+                from pyodide import create_proxy        
+                
+                def n4():
+                    print("lol")
+                
             </py-script>
 
             <header>
