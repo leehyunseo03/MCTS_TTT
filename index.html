@@ -36,27 +36,32 @@
             <h2> Start Tic-Tac-Toe of the following sizes: </h2>
 
             <div id = "btns">
-                <button style = "font-size: 2em;" id ="3btn" onClick ="n3" >3</button>
-                <button style = "font-size: 2em;" id ="4btn" pys-onClick ="n4">4</button>
+                <button style = "font-size: 2em;" id ="3btn" onClick ="n3()" >3</button>
+                <button style = "font-size: 2em;" id ="4btn" onClick ="n4()">4</button>
             </div>
             
             <div>
                 <table id ="hello"></table>
             </div>
+
             <script>
+
                 function n3(){
                     alert("lee hyun seo");
-                }
-            </script>
 
-            <py-script>
-                from js import document
-                from pyodide import create_proxy        
-                
-                def n4():
-                    print("lol")
-                
-            </py-script>
+                    const spawn = require('child_process').spawn;
+                    const result = spawn('python', ['./test.py']);
+
+                    result.stdout.on('data', function(data) {
+                        console.log(data.toString());
+                    });
+
+                    result.stderr.on('data', function(data) {
+                        console.log(data.toString());
+                    });
+                }
+    
+            </script>
 
             <header>
                 <h1>
@@ -66,13 +71,6 @@
     
 
         </div>
-
-        <py-script> 
-            print('Hello, World!') 
-            print("this is python")
-            print("lol")
-            
-        </py-script>
         
     </body>
 </html>
